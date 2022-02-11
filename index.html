@@ -1,0 +1,32 @@
+<html>
+<head>
+  <title>Select a fruit</title>
+
+  <style>
+    select:focus {
+      outline: 1px solid red;
+    }
+  </style>
+
+  <script>
+    function clickMe() {
+      let select = document.getElementById('select');
+      let content = document.getElementById('content');
+      content.innerText = 'You selected ' + select.value;
+    }
+  </script>
+</head>
+<body>
+  <h3>Select a Fruit</h3>
+  <select id="select">
+    <option value="0"></option>
+    <option value="1">Banana</option>
+    <option value="2">Apple</option>
+    <option value="3">Strawberry</option>
+    <option value="4">Orange</option>
+    <option value="5">Grape</option>
+  </select>
+  <button onclick="clickMe()">Click Me</button>
+  <div id="content"></div>
+</body>
+</html>
